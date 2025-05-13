@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="EventEaseDBContext-Web.config Connection String" description="EventEaseDBContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:eventease-sqlserver-st10448834.database.windows.net,1433;Initial Catalog=EventEaseDB;Persist Security Info=False;User ID=Khumo-Thato;Password=Liverp*ol2017;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\lab_services_student\\Desktop\\CLDV6211Part1\\EventEaseBookingSystem\\EventEaseBookingSystem\\obj\\Release\\Package\\PackageTmp\\Views\\Web\.config$" match="/configuration/connectionStrings/add[@name='EventEaseDBContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\lab_services_student\\Desktop\\CLDV6211Part1\\EventEaseBookingSystem\\EventEaseBookingSystem\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EventEaseDBContext']/@connectionString" />
+  </parameter>
+</parameters>

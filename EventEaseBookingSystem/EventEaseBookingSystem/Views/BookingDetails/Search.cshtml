@@ -1,0 +1,54 @@
+﻿@model List<EventEaseBookingSystem.Models.BookingDetailsViewModel>
+
+@{
+    ViewBag.Title = "Search Booking Details";
+}
+
+<h2>Search Booking Details</h2>
+
+<form method="get" action="@Url.Action("Search", "BookingDetails")">
+    <input type="text" name="query" placeholder="Search by Booking ID or Event Name..." class="form-control" style="max-width: 400px;" />
+    <br />
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form>
+
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Booking ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Number of Tickets</th>
+            <th>Booking Date</th>
+            <th>Event Name</th>
+            <th>Event Date</th>
+            <th>Venue</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.BookingId</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Email</td>
+                    <td>@item.NumberOfTickets</td>
+                    <td>@item.BookingDate.ToString("yyyy-MM-dd")</td>
+                    <td>@item.EventName</td>
+                    <td>@item.EventDate.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@item.VenueName</td>
+                    <td>@item.Location</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="9">No records found.</td></tr>
+        }
+    </tbody>
+</table>
